@@ -1,0 +1,33 @@
+
+#define MIN(a,b) (((a)<(b))?(a):(b))
+#define MAX(a,b) (((a)>(b))?(a):(b))
+
+// c++ comment.
+
+/* c comment */.
+
+// -I"/includedir".
+//#include <stdlib.h>.
+
+ 
+int main(void)
+{
+    #ifdef DEBUG
+    printf ( "-DDEBUG\n" ) ;
+    #endif
+    
+    printf ( "%d %d\n",MIN(1,2),MAX(1,2) ) ;
+
+    int array??(10??) ; // trigraph
+
+    #ifdef __STDC__
+    
+    printf ( "%s %s %s %s %s\n"
+    ,   __FILE__   
+    ,   __DATE__ ,     __TIME__  ,   __LINE__  , __STDC__  ) ;
+
+    #endif
+    
+ 
+    return 0 ;
+}

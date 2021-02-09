@@ -1,0 +1,16 @@
+
+ 0) [v] -T disable trigraph 
+ 1) [v] -C disable // /* */
+ 2) [v] add $ in macro id
+ 3) [v] -$ disable $ in macro id
+ 4) [ ] keep blank
+ 5) [ ] output in string
+ 6) [ ] lib
+ 7) [ ] ... __VA_ARGS__
+ 8) [ ] := ?= operator
+ 9) [v] add garbage collector
+10) [ ] reformat code
+11) [v] compiling with -Wall
+12) [v] add doc.tx & dev.txt
+13) [v] add _MSC_VER , _WIN32 , _WIN64 , __linux__ __GNUC__
+ 

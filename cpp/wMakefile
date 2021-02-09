@@ -1,0 +1,29 @@
+TARGET =cpp.exe
+FLAG= /WX /utf-8 /MP
+
+SOURCES =       \
+	src\cpp.c		\
+	src\eval.c		\
+	src\getopt.c    \
+	src\hideset.c   \
+	src\include.c   \
+	src\lex.c		\
+	src\macro.c		\
+	src\nlist.c		\
+	src\tokens.c    \
+	src\unix.c		\
+	src\gc.c
+	    
+all: $(TARGET)
+
+$(TARGET):$(SOURCES)
+	cl $(FLAG) /Febin\$(TARGET) $(SOURCES) 
+
+clean:
+    del /Q *.obj >nul 2>&1
+    del /Q bin\*.exe >nul 2>&1 
+    del /Q obj\*.obj >nul 2>&1
+    del /Q lib\*.* >nul 2>&1
+    del /Q tst\*.out >nul 2>&1
+        
+

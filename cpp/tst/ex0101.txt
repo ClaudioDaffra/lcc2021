@@ -1,0 +1,9 @@
+// prova 1
+#define XXX 	かん
+
+int a ; 
+
+#include "ex0102.txt"
+
+printf("%d %d %d",XXX,YYY,ZZZ(ù,è) ) ;
+

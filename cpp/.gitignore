@@ -4,7 +4,8 @@
 
 # exe files
 
-
+*.exe
+cpp
 
 # Object files
 *.o

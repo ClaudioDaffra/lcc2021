@@ -1,0 +1,25 @@
+ 
+int main(void)
+{
+    #ifdef _MSC_VER
+    printf("_MSC_VER %d.\n",_MSC_VER);
+    #endif 
+
+    #ifdef _WIN32
+    printf("_WIN32 %d.\n",_WIN32);
+    #endif 
+
+    #ifdef _WIN64
+    printf("_WIN64 %d.\n",_WIN64);
+    #endif 
+
+    #ifdef __GNUC__
+    printf("__GNUC__ %d.\n",__GNUC__);
+    #endif  
+
+    #ifdef __linux__
+    printf("__linux__ %d.\n",__linux__);
+    #endif  
+
+    return 0 ;
+}

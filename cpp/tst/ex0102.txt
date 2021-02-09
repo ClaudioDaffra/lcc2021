@@ -1,0 +1,6 @@
+// prova 2
+#define YYY 	かんじ
+
+#include "ex0103.txt"
+
+int b ; 

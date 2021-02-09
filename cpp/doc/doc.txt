@@ -1,0 +1,88 @@
+
+usage
+
+    cpp option filein[=stdin] fileout[=stdout]
+    
+    ex : bin\cpp.exe -DDEBUG -D__STDC__ -T -C tst/ex0200.txt tst/x.out
+    
+options
+
+    [ $CTMNOVv+I:D:U:F:lg ]
+    
+    N   ?
+    I   include header lib              :   -I"C:/includedir"
+    D   define macro command line       :   ex -DDEBUG
+    U   undefine macro command line     :   ex -U...
+    M   ?   set obj name                :   -M
+    v   $resivion$ $date$               :   -v
+    V   verbose output                  :   -V
+    +   c++                             :   -+
+    T   disable trigraph                :   -T   
+    C   disable C C++ comments          :   -C
+	$	disable dollar in macro			:	-$
+   
+keywords
+    
+    #if             v		    
+    #ifdef          v	    
+    #ifndef         v	    
+    #elif           v	    
+    #else           v	    
+    #endif	        v
+    #include        v	    
+    #define         v	    
+    #undef          v    
+    #line           v	    
+    #error          v  
+    #pragma	        v
+    #eval               ?	    
+    defined         v       :	#if defined(DEBUG)
+    ident       	,  		:	 /* treat like pragma (ignored) */
+
+predefined macro
+
+	__LINE__  
+	__FILE__  
+	__DATE__  
+	__TIME__  
+	__STDC__        	( not defined )
+	__COUNTER__       	incremental counter
+
+	__VA_ARGS__     NO
+	...             NO
+
+	_MSC_VER
+	_WIN32
+	_WIN64
+	__linux__
+	__GNUC__
+		
+example
+
+    ex1: 	include multiple file
+    
+        win :   bin\cpp.exe tst/ex0101.txt tst/x.out
+        lin :	./bin/cpp   tst/ex0101.txt tst/x.out
+        
+    ex2:	enable disable Trigraphs & Define Macro
+    
+        win :   bin\cpp.exe -DDEBUG -D__STDC__ -T tst/ex0200.txt tst/x.out
+        lin :	./bin/cpp   -DDEBUG -D__STDC__ -T tst/ex0200.txt tst/x.out
+
+    ex3:	enable disable C C++ comments
+    
+        win :   		bin\cpp.exe -DDEBUG -D__STDC__ -C tst/ex0300.txt tst/x.out
+        lin : valgrind	./bin/cpp	-DDEBUG -D__STDC__ -C tst/ex0300.txt tst/x.out
+
+
+	ex4:	predefined macro OS/Compiler
+	
+        win : bin\cpp.exe   tst/ex0400.txt tst/x.out
+        lin : ./bin/cpp		tst/ex0400.txt tst/x.out 
+        
+  
+        
+/**/
+
+
+   

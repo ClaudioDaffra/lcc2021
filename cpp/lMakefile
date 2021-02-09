@@ -1,0 +1,48 @@
+APP=cpp
+CC=gcc
+LINK=gcc
+
+FLAGS=-std=c11 -Wall
+LIBRARYS=
+
+ALL : $(APP)
+
+ODIR=obj
+SDIR=src
+BDIR=bin
+LDIR=lib
+
+OBJS =  gc.o		\
+		cpp.o		\
+		eval.o		\
+		getopt.o 	\
+		hideset.o	\
+		include.o	\
+		lex.o		\
+		macro.o		\
+		nlist.o		\
+		tokens.o	\
+		unix.o
+
+		
+    
+OBJ = $(patsubst %,$(ODIR)/%,$(OBJS))
+
+$(ODIR)/%.o: $(SDIR)/%.c 
+		$(CC) -c -o $@ $< $(FLAGS)
+
+ALLOBJ =  $(OBJ)     
+
+$(APP):$(ALLOBJ) 
+		$(CC) -o $(BDIR)/$@ $^ $(flgags) $(LIBRARYS) 
+
+.PHONY: clean
+clean:
+		-rm $(BDIR)/$(APP) ; 
+		-rm $(ODIR)/*.o ; 
+		-rm $(LDIR)/*.o ; 
+		-rm $(ODIR)/*.o ; 
+		-rm *.o ; 
+		-rm tst/*.out;
+		
+

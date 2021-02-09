@@ -1,0 +1,6 @@
+
+#define ZZZ(a,b) (è - @ + a - § + b )
+
+#include "test2/ex0104.txt"
+
+int c ;
