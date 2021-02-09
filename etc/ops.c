@@ -1,4 +1,4 @@
-#include "c.h"
+#include "../src/c.h"
 
 /* ops [ {csilhfdxp}=n ]...
  * prints lcc dag operator set for a given set of type sizes.
@@ -53,7 +53,7 @@ int main(int argc, char *argv[]) {
 	}
 #define gop(x,n)
 #define op(x,t,s) count += doop(x,t,#s,#x #t);
-#include "ops.h"
+#include "../src/ops.h"
 #undef gop
 #undef op
 	fprintf(stderr, "%d operators\n", count);
