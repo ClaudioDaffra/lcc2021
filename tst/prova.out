@@ -1,0 +1,21 @@
+.globl main
+.text
+.align 16
+.type main,@function
+main:
+pushl %ebp
+pushl %ebx
+pushl %esi
+pushl %edi
+movl %esp,%ebp
+mov $0,%eax
+.LC1:
+movl %ebp,%esp
+popl %edi
+popl %esi
+popl %ebx
+popl %ebp
+ret
+.Lf2:
+.size main,.Lf2-main
+.ident "LCC: 4.2"

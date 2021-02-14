@@ -1,4 +1,4 @@
-sudo rm -r /usr/local/lib/lcc
+
 sudo mkdir /usr/local/lib/lcc
 sudo mkdir /usr/local/lib/lcc/gcc
 sudo cp bin/cpp /usr/local/lib/lcc/gcc/cpp
