@@ -6,7 +6,7 @@ driver
 rcc		->	assemblatore 
 lburg	->	driver per decodificare i files .md in C
 cpp		->	preprocessore
-lcc 
+lcc 	->	compilatore invoca preprocessore
 bprint	->	expression profiler 
 liblcc
 ops		->	prints lcc dag operator set for a given set of type sizes.
@@ -18,7 +18,10 @@ build
 cpp 		->	sh compile_cpp.sh			make
 lburg 		->	sh compile_lburg.sh
 rcc			->	sh compile_rcc.sh
-lcc 
+lcc 		->	sh compile_lcc_linux.sh
+			->
 bprint 
-liblcc
-ops			-> gcc etc/ops.c -o bin/ops
+
+liblcc		->	ERR gcc etc/bprint.c src/profio.c -o bin/bprint -Wfatal-errors
+
+ops			-> sh compile_ops.sh

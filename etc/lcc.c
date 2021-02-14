@@ -47,7 +47,10 @@ extern char *stringf(const char *, ...);
 extern int suffix(char *, char *[], int);
 extern char *tempname(char *);
 
+#ifndef __linux
 extern int access(char *, int);
+#endif
+
 extern int getpid(void);
 
 extern char *cpp[], *include[], *com[], *as[],*ld[], inputs[], *suffixes[];
@@ -71,7 +74,8 @@ char *tempdir = TEMPDIR;	/* directory for temporary files */
 static char *progname;
 static List lccinputs;		/* list of input directories */
 
-main(int argc, char *argv[]) {
+int main(int argc, char *argv[]) 
+{
 	int i, j, nf;
 	
 	progname = argv[0];
@@ -217,7 +221,13 @@ char *basepath(char *name) {
 #define _P_WAIT 0
 extern int fork(void);
 extern int wait(int *);
-extern void execv(const char *, char *[]);
+
+#ifdef __linux__
+#include <unistd.h>
+#endif
+ 
+//extern void execv(const char *, char *[]);
+ 
 
 static int _spawnvp(int mode, const char *cmdname, const char *const argv[]) {
 	int pid, n, status;
