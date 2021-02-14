@@ -1,11 +1,13 @@
-//#include "profio.c"
+#include "../src/profio.c"
 #include <assert.h>
 #include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-
+#ifdef __linux__
+#include <unistd.h>
+#endif
 
 /* bprint [ -c | -Idir... | -f | -b | -n ] [ file... ]
  * annotate listings of files with prof.out data
@@ -183,7 +185,8 @@ void printfile(struct file *p, int nf) {
 }
 
 /* printfuncs - summarize data for functions in p */
-void printfuncs(struct file *p, int nf) {
+void printfuncs(struct file *p, int nf) 
+{
 	struct func *q;
 
 	if (nf)
