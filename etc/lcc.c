@@ -215,10 +215,11 @@ char *basepath(char *name) {
 	return s;
 }
 
-#ifdef WIN32
+#if defined(_WIN32) || defined(_WIN64)
 #include <process.h>
 #else
 #define _P_WAIT 0
+
 extern int fork(void);
 extern int wait(int *);
 
