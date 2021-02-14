@@ -21,8 +21,7 @@ rcc			->	sh compile_rcc.sh
 lcc 		->	sh compile_lcc_linux.sh
 			->  sh compile_lcc_windows.sh
 bprint 		->	sh compile_bprint.sh
-ops			-> sh compile_ops.sh
-
-liblcc		->	ERR gcc etc/bprint.c src/profio.c -o bin/bprint -Wfatal-errors
+ops			->  sh compile_ops.sh
+liblcc		->	sh compile_liblcc.sh
 
 
