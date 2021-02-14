@@ -1,1 +1,0 @@
-gcc src/alloc.c src/bind.c src/dag.c src/decl.c src/enode.c src/error.c src/expr.c src/event.c src/init.c src/inits.c src/input.c src/lex.c src/list.c src/main.c src/output.c src/prof.c src/profio.c src/simp.c src/stmt.c src/string.c src/sym.c src/trace.c src/tree.c src/types.c  src/null.c src/symbolic.c src/bytecode.c src/gen.c src/stab.c 	src/dagcheck.md -o deleteme

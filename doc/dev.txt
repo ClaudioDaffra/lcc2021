@@ -8,7 +8,7 @@ lburg	->	driver per decodificare i files .md in C
 cpp		->	preprocessore
 lcc 	->	compilatore invoca preprocessore
 bprint	->	expression profiler 
-liblcc
+liblcc	->	liblcc
 ops		->	prints lcc dag operator set for a given set of type sizes.
 
 -------
@@ -23,5 +23,6 @@ lcc 		->	sh compile_lcc_linux.sh
 bprint 		->	sh compile_bprint.sh
 ops			->  sh compile_ops.sh
 liblcc		->	sh compile_liblcc.sh
+
 
 
